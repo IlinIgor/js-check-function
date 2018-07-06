@@ -3,7 +3,7 @@ function square(array) {
   return (function squareItem (newArray) {
     if (newArray.length !== array.length) {
       newArray.push(array[newArray.length] * array[newArray.length])
-      squareItem(newArray)
+      return squareItem(newArray)
     }
     return newArray
   })([])
